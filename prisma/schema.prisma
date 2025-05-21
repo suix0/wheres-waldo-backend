@@ -15,11 +15,11 @@ datasource db {
 }
 
 model Photo {
-  id     Int    @unique @default(autoincrement())
-  name   String @unique
-  url    String
-  pixels Json
-  User   User[]
+  id        Int         @unique @default(autoincrement())
+  name      String      @unique
+  url       String
+  User      User[]
+  Character Character[]
 }
 
 model User {
@@ -27,4 +27,12 @@ model User {
   photo   Photo  @relation(fields: [photoId], references: [id])
   photoId Int
   score   String
+}
+
+model Character {
+  id          Int    @unique @default(autoincrement())
+  url         String
+  coordinates Int
+  Photo       Photo  @relation(fields: [photoId], references: [id])
+  photoId     Int
 }
