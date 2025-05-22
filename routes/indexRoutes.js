@@ -3,7 +3,11 @@ const indexController = require("../controllers/indexController");
 
 const indexRouter = Router();
 
-indexRouter.get("/games", indexController.getAllGames);
-// indexRouter.post("/");
+// Get all photos and their information
+indexRouter.get("/photos", indexController.getAllGames);
+
+// Post the info on specific photo and validate click coordinates with
+// Coordinates of characters in photo
+indexRouter.post("/photos/:photoId", indexController.validateCoordinates);
 
 module.exports = indexRouter;

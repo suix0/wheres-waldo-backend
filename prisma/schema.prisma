@@ -30,9 +30,9 @@ model User {
 }
 
 model Character {
-  id          Int    @unique @default(autoincrement())
-  url         String
-  coordinates Int
-  Photo       Photo  @relation(fields: [photoId], references: [id])
-  photoId     Int
+  id                Int    @unique @default(autoincrement())
+  url               String
+  coordinatesRanges Json?
+  Photo             Photo  @relation(fields: [photoId], references: [id])
+  photoId           Int
 }
