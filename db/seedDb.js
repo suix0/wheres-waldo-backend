@@ -12,7 +12,12 @@ const main = async () => {
       },
       {
         url: "https://gcwuvahgrsxeubnvkbvd.supabase.co/storage/v1/object/sign/photos/gamerVerse-characters/gv-ch-1.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2YyMTU3YzFmLWU4MzAtNGQyYy1hYjMxLTU5ZDE3NjBmZGVjYiJ9.eyJ1cmwiOiJwaG90b3MvZ2FtZXJWZXJzZS1jaGFyYWN0ZXJzL2d2LWNoLTEucG5nIiwiaWF0IjoxNzQ3Nzg4Njg4LCJleHAiOjIwNjMxNDg2ODh9.gsYtMe73pWiTU-iWkvwGkFR34CTBvWaQ_jdG1_iuBuQ",
-        coordinatesRanges: {},
+        coordinatesRanges: {
+          x1: "1838.55",
+          x2: "1892.85",
+          y1: "3010.40",
+          y2: "3106.91",
+        },
         photoId: 1,
       },
       {
