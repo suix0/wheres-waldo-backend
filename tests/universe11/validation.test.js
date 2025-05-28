@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use("/", indexRouter);
 
-// Gamerverse Character Coordinate Validation Testing
+// Universe 11 Character Coordinate Validation Testing
 
 // TEST CHARACTER #1 COORDINATE VALIDATION
 describe("wrong coordinates on character #1 on setting #3 ", () => {

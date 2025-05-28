@@ -32,9 +32,6 @@ exports.validateCoordinates = async (req, res) => {
     (char) => char.id === characterId
   )[0];
 
-  console.log(clickCoordinates);
-  console.log(characterToVerify);
-
   // Validate x click coordinate
   // if it is between the the acceptable horizontal pixels
   const xValid = _.inRange(
