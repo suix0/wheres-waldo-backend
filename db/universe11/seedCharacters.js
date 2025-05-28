@@ -28,7 +28,7 @@ const main = async () => {
       {
         url: "https://gcwuvahgrsxeubnvkbvd.supabase.co/storage/v1/object/sign/photos/universe11-characters/u11-ch-3.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzI5YjczZWFjLWM5YTMtNDdjMy04ZGM0LWFiM2EwNDQyMmU2MiJ9.eyJ1cmwiOiJwaG90b3MvdW5pdmVyc2UxMS1jaGFyYWN0ZXJzL3UxMS1jaC0zLnBuZyIsImlhdCI6MTc0ODQwMTM4MiwiZXhwIjoyMDYzNzYxMzgyfQ.WQywf8LtXVsFezZdEpUksDhpLsbuuWqLjD30SWfupoU",
         coordinatesRanges: {
-          x1: 1135,
+          x1: 1128,
           x2: 1198,
           y1: 1303,
           y2: 1425.25,
