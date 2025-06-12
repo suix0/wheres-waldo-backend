@@ -11,4 +11,11 @@ const PORT = process.env.PORT || 5000;
 
 app.use("/", indexRouter);
 
+app.use((err, req, res, next) => {
+  console.log(err.message);
+  res.status(500).send({
+    error: err.message || "Internal Server Error",
+  });
+});
+
 app.listen(PORT);

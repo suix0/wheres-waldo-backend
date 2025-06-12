@@ -10,4 +10,6 @@ indexRouter.get("/photos", indexController.getAllGames);
 // Coordinates of characters in photo
 indexRouter.post("/photos/:photoId", indexController.validateCoordinates);
 
+// Post user and their score on the photo that they played in
+indexRouter.post("/photos/:photoId/users", indexController.postScore);
 module.exports = indexRouter;

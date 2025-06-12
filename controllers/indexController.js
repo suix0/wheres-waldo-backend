@@ -1,4 +1,5 @@
 const { PrismaClient } = require("../generated/prisma");
+const { body, validationResult } = require("express-validator");
 const _ = require("lodash");
 
 const prisma = new PrismaClient();
@@ -54,3 +55,38 @@ exports.validateCoordinates = async (req, res) => {
     res.sendStatus(404);
   }
 };
+
+exports.postScore = [
+  body("name").custom(async (value, { req }) => {
+    const isExist = await prisma.user.findUnique({
+      where: {
+        name: value,
+        photoId: req.body.photoId,
+      },
+    });
+    if (isExist) {
+      throw new Error("Name already exists.");
+    }
+  }),
+  async (req, res) => {
+    const errors = validationResult(req);
+    console.log(errors);
+    if (!errors.isEmpty()) {
+      res.status(500).json({ errors: errors.array() });
+    }
+
+    const newUser = await prisma.user.create({
+      data: {
+        photoId: req.body.photoId,
+        score: req.body.score,
+        name: req.body.name,
+      },
+    });
+
+    if (newUser) {
+      res.sendStatus(200);
+    } else {
+      res.sendStatus(404);
+    }
+  },
+];
